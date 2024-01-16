@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
 
-        $asesor = User::create([
+        $gerente = User::create([
             'name' => 'gerente',
             'codigo' => 'ger1',
             'fullacces' => 'gerente',

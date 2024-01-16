@@ -25,7 +25,7 @@ class ClientecreditosController extends Controller
     //visualizar creditos
     public function index(){
       $user = Auth::user();
-      $creditos = Clientecredito::all();
+      $creditos = Clientecredito::where('cliente', $user->name)->get();
       return view('viewcreditocliente',compact('creditos'));
     }
 
